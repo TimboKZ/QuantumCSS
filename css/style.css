@@ -1,0 +1,869 @@
+/*
+  Quantum CSS v0.1
+  Copyright (c) 2014 Timur Kuzhagaliyev (TimboKZ)
+*/
+html body {
+  font-family: "Trebuchet MS";
+  background-color: #333;
+}
+html body #header {
+  border-bottom: none !important;
+  background: none !important;
+  position: relative;
+  height: 150px;
+}
+html body #header #sr-header-area {
+  border-bottom: solid 4px #ccc;
+  background-color: #f2f2f2;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  color: #333;
+}
+html body #header #header-bottom-left {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+html body #header #header-bottom-left #header-img,
+html body #header #header-bottom-left #header-img-a {
+  display: none;
+}
+html body #header #header-bottom-left .pagename a {
+  background-image: url(%%text%%);
+  background-size: contain;
+  text-indent: -9999px;
+  position: absolute;
+  display: block;
+  height: 110px;
+  width: 625px;
+}
+html body #header #header-bottom-left .pagename a:hover {
+  background-image: url(%%text-hover-alt%%);
+}
+html body #header #header-bottom-left .tabmenu {
+  position: absolute;
+  bottom: -50px;
+  height: 30px;
+  width: 140px;
+  margin: 0px;
+  left: 20px;
+}
+html body #header #header-bottom-left .tabmenu li {
+  vertical-align: middle;
+  display: block;
+  padding: 0px;
+  height: 30px;
+  width: 140px;
+  margin: 0px;
+}
+html body #header #header-bottom-left .tabmenu li.selected {
+  background-color: #222;
+}
+html body #header #header-bottom-left .tabmenu li.selected a {
+  border-bottom: none;
+  border-left: none;
+  border-top: none;
+  color: #ff4500;
+}
+html body #header #header-bottom-left .tabmenu li.selected a:hover {
+  color: #ff6a33 !important;
+}
+html body #header #header-bottom-left .tabmenu li a {
+  text-shadow: #222 0px 1px 0px;
+  border-right: solid 5px #222;
+  font-family: "Trebuchet MS";
+  background: none !important;
+  line-height: 30px;
+  padding: 0px 10px;
+  display: block;
+  height: 30px;
+  margin: 0px;
+  color: #ccc;
+}
+html body #header #header-bottom-left .tabmenu li a:hover {
+  background-color: #1e1e1e !important;
+  border-right: solid 5px #1e1e1e;
+  color: #fff;
+}
+html body #header #header-bottom-right {
+  border-bottom: solid 5px #1e1e1e;
+  background-color: #222;
+  border-radius: 0px;
+  position: absolute;
+  font-size: 12px;
+  padding: 0px;
+  height: 30px;
+  bottom: 20px;
+  margin: 0px;
+  right: 20px;
+}
+html body #header #header-bottom-right .separator {
+  display: none;
+}
+html body #header #header-bottom-right #userbarToggle {
+  background-color: #1e1e1e !important;
+  border-radius: 0px !important;
+  text-align: center !important;
+  line-height: 35px !important;
+  font-size: 0px !important;
+  padding: 0px !important;
+  height: 35px !important;
+  border: none !important;
+  width: 30px !important;
+  left: -30px !important;
+  top: 0px !important;
+}
+html body #header #header-bottom-right #userbarToggle.userbarShow:before {
+  content: '<';
+}
+html body #header #header-bottom-right #userbarToggle:before {
+  text-align: center;
+  position: absolute;
+  line-height: 28px;
+  font-size: 16px;
+  content: '>';
+  height: 30px;
+  color: #999;
+  width: 30px;
+  left: 0px;
+  top: 0px;
+}
+html body #header #header-bottom-right #userbarToggle:hover:before {
+  color: #ff4500;
+}
+html body #header #header-bottom-right .user {
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 0px;
+  padding: 0px;
+  height: 30px;
+  margin: 0px;
+}
+html body #header #header-bottom-right .user > a {
+  font-family: "Trebuchet MS";
+  background: none !important;
+  display: inline-block;
+  line-height: 30px;
+  padding: 0px 10px;
+  color: #0099ff;
+  font-size: 12px;
+  height: 30px;
+  margin: 0px;
+}
+html body #header #header-bottom-right .user > a:hover {
+  background-color: #1e1e1e !important;
+  color: #ff4500;
+}
+html body #header #header-bottom-right .user .userkarma {
+  font-family: "Trebuchet MS";
+  background: none !important;
+  display: inline-block;
+  line-height: 30px;
+  padding: 0px 10px;
+  font-size: 12px;
+  cursor: default;
+  border: none;
+  height: 30px;
+  margin: 0px;
+  color: #ccc;
+}
+html body #header #header-bottom-right .user .userkarma a {
+  color: #ccc;
+}
+html body #header #header-bottom-right .user .userkarma a:hover {
+  color: #0099ff;
+}
+html body #header #header-bottom-right #mail {
+  background-image: url(%%icons%%);
+  background-position: 0px 0px;
+  margin: 0px 10px;
+  height: 12px;
+  width: 18px;
+}
+html body #header #header-bottom-right #mail.havemail {
+  background-position: -18px 0px;
+}
+html body #header #header-bottom-right #modmail {
+  background-image: url(%%icons%%);
+  background-position: 0px -12px;
+  margin: 0px 10px -5px 10px;
+  height: 14px;
+  width: 18px;
+}
+html body #header #header-bottom-right #modmail.havemail {
+  background-position: -18px -12px;
+}
+html body #header #header-bottom-right .flat-list a {
+  font-family: "Trebuchet MS";
+  background: none !important;
+  text-transform: capitalize;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 30px;
+  padding: 0px 10px;
+  color: #0099ff;
+  font-size: 12px;
+  height: 30px;
+  margin: 0px;
+}
+html body #header #header-bottom-right .flat-list a:hover {
+  background-color: #1e1e1e !important;
+  color: #ff4500;
+}
+html body #header #header-bottom-right .logout a {
+  font-family: "Trebuchet MS";
+  background: none !important;
+  text-transform: capitalize;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 30px;
+  padding: 0px 10px;
+  color: #0099ff;
+  font-size: 12px;
+  height: 30px;
+  margin: 0px;
+}
+html body #header #header-bottom-right .logout a:hover {
+  background-color: #1e1e1e !important;
+  color: #ff4500;
+}
+html body .side {
+  font-family: "Trebuchet MS";
+  margin: 20px 20px 20px 0px;
+  background: none;
+}
+html body .side .spacer {
+  margin: 0px 0px 20px 0px;
+}
+html body .side .spacer #search > input {
+  border-bottom: solid 5px #1e1e1e;
+  font-family: "Trebuchet MS";
+  text-transform: capitalize;
+  background-color: #222;
+  font-weight: normal;
+  text-align: center;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  padding: 6px 0px;
+  font-size: 13px;
+  color: #fff;
+}
+html body .side .spacer #search > input:focus {
+  color: #0099ff;
+  outline: none;
+}
+html body .side .spacer #search #searchexpando {
+  border-bottom: solid 5px #ccc;
+  padding: 10px 10px 8px 10px;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  margin: 0px !important;
+  border-radius: 0px;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  width: 300px;
+}
+html body .side .spacer .linkinfo {
+  border-bottom: solid 5px #ccc;
+  background-color: #f2f2f2;
+  border-radius: 0px;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  color: #2f2f2f;
+}
+html body .side .spacer #login_login-main {
+  border-bottom: solid 5px #1e1e1e !important;
+  background-color: #222 !important;
+  border-right: none !important;
+  border-left: none !important;
+  border-top: none !important;
+  padding: 10px !important;
+  color: #ccc !important;
+}
+html body .side .spacer #login_login-main input[type="text"],
+html body .side .spacer #login_login-main input[type="password"] {
+  border-bottom: solid 4px #333 !important;
+  text-transform: capitalize !important;
+  margin: 0px 0px 10px 0px !important;
+  background-color: #444 !important;
+  border-right: none !important;
+  border-left: none !important;
+  border-top: none !important;
+  color: #f2f2f2 !important;
+  width: 280px !important;
+}
+html body .side .spacer #login_login-main input[type="text"]:focus,
+html body .side .spacer #login_login-main input[type="password"]:focus {
+  border-bottom: solid 4px #444 !important;
+  background-color: #555 !important;
+  outline: none !important;
+}
+html body .side .spacer #login_login-main .submit .btn {
+  border-bottom: solid 4px #ccc;
+  text-transform: capitalize;
+  background-color: #f2f2f2;
+  background-image: none;
+  border-radius: 0px;
+  border-right: none;
+  border-left: none;
+  padding: 5px 10px;
+  border-top: none;
+  font-size: 12px;
+  color: #222;
+}
+html body .side .spacer #login_login-main .submit .btn:hover {
+  border-bottom: solid 4px #008ae6;
+  background-color: #0099ff !important;
+  color: #fff;
+}
+html body .side .spacer .sidebox .morelink {
+  border: none !important;
+  padding: 0px 0px;
+  height: auto;
+}
+html body .side .spacer .sidebox .morelink a {
+  background-image: none !important;
+  border-bottom: solid 5px #1e1e1e;
+  background-color: #222;
+  font-weight: normal;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  padding: 0px 0px;
+  font-size: 14px;
+  height: auto;
+  color: #ccc;
+}
+html body .side .spacer .sidebox .morelink a:hover {
+  background-color: #1e1e1e;
+  color: #0099ff;
+}
+html body .side .spacer .sidebox .morelink a:active {
+  background-color: #1e1e1e;
+  color: #ff4500;
+}
+html body .side .spacer .sidebox .morelink .nub {
+  display: none;
+}
+html body .side .spacer .sidebox .spacer > .subtitle {
+  padding: 10px;
+  margin: 0px;
+}
+html body .side .spacer .sidebox.create > .spacer {
+  border-bottom: solid 5px #ccc;
+  background-color: #f2f2f2;
+  padding: 5px 0px 5px 44px;
+}
+html body .side .spacer .sidebox.create > .spacer a {
+  background-image: url(%%proud-quantum%%);
+  background-position: center;
+  background-size: cover;
+  left: 5px;
+  top: 5px;
+}
+html body .side .spacer .titlebox .redditname {
+  margin: 0px 0px 0px 0px;
+}
+html body .side .spacer .titlebox .redditname a {
+  border-bottom: solid 5px #008ae6;
+  background-color: #0099ff;
+  font-weight: normal;
+  text-align: center;
+  padding: 6px 10px;
+  font-size: 18px;
+  display: block;
+  margin: 0px;
+  color: #fff;
+}
+html body .side .spacer .titlebox .redditname a:before {
+  color: #ccebff;
+  font-weight: bold;
+  content: '/r/';
+}
+html body .side .spacer .titlebox .redditname a:hover {
+  border-bottom: solid 5px #1e1e1e;
+  background-color: #222;
+  text-decoration: none;
+  color: #0099ff;
+}
+html body .side .spacer .titlebox .redditname a:hover:before {
+  color: #005c99;
+}
+html body .side .spacer .titlebox .redditname a:active {
+  color: #ff4500;
+}
+html body .side .spacer .titlebox .redditname a:active:before {
+  color: #992900;
+}
+html body .side .spacer .titlebox .subButtons {
+  margin: 20px 0px 0px 0px !important;
+}
+html body .side .spacer .titlebox .subButtons .RESshortcutside,
+html body .side .spacer .titlebox .subButtons .RESDashboardToggle {
+  border-bottom: solid 4px #ccc;
+  background-color: #f2f2f2;
+  margin: 20px 20px 0px 0px;
+  background-image: none;
+  border-radius: 0px;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  font-size: 12px;
+  padding: 5px;
+  color: #222;
+}
+html body .side .spacer .titlebox .subButtons .RESshortcutside:hover,
+html body .side .spacer .titlebox .subButtons .RESDashboardToggle:hover {
+  border-bottom: solid 4px #008ae6;
+  background-color: #0099ff !important;
+  color: #fff;
+}
+html body .side .spacer .titlebox .subButtons .RESshortcutside.remove,
+html body .side .spacer .titlebox .subButtons .RESDashboardToggle.remove {
+  border-bottom: solid 4px #e63e00;
+  background-color: #ff4500 !important;
+  color: #fff;
+}
+html body .side .spacer .titlebox .subButtons .RESDashboardToggle {
+  margin: 20px 0px 0px 0px;
+}
+html body .side .spacer .titlebox .subscribe-button {
+  margin: 20px 20px 0px 0px;
+}
+html body .side .spacer .titlebox .subscribe-button .option {
+  border-bottom: solid 4px #ccc;
+  background-color: #f2f2f2;
+  margin: 0px 0px 0px 0px;
+  background-image: none;
+  border-radius: 0px;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  font-size: 12px;
+  padding: 5px;
+  color: #222;
+}
+html body .side .spacer .titlebox .subscribe-button .option:hover {
+  border-bottom: solid 4px #008ae6;
+  background-color: #0099ff !important;
+  color: #fff;
+}
+html body .side .spacer .titlebox .subscribe-button .option.remove {
+  border-bottom: solid 4px #e63e00;
+  background-color: #ff4500 !important;
+  color: #fff;
+}
+html body .side .spacer .titlebox .subscribers {
+  background-color: #222 !important;
+  border-bottom: solid 4px #1e1e1e;
+  margin: 20px 0px 0px 0px;
+  background-image: none;
+  border-radius: 0px;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  font-size: 12px;
+  padding: 5px;
+  color: #ccc;
+}
+html body .side .spacer .titlebox .users-online {
+  border-bottom: solid 4px #212121;
+  background-color: #262626 !important;
+  margin: 20px 0px 0px 20px;
+  background-image: none;
+  display: inline-block;
+  border-radius: 0px;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  font-size: 12px;
+  padding: 5px;
+  color: #999;
+}
+html body .side .spacer .titlebox .users-online:before {
+  display: none;
+}
+html body .side .spacer .titlebox .users-online .word {
+  display: none;
+}
+html body .side .spacer .titlebox .leavemoderator,
+html body .side .spacer .titlebox .leavecontributor-button {
+  border-bottom: solid 4px #ccc;
+  background-color: #f2f2f2;
+  margin: 20px 0px 0px 0px;
+  display: block;
+  padding: 10px;
+}
+html body .side .spacer .titlebox .leavemoderator *,
+html body .side .spacer .titlebox .leavecontributor-button * {
+  vertical-align: middle;
+}
+html body .side .spacer .titlebox .flairtoggle {
+  border-bottom: solid 4px #1e1e1e;
+  margin: 20px 0px 0px 0px;
+  background-color: #222;
+  display: block;
+  padding: 10px;
+  color: #ccc;
+}
+html body .side .spacer .titlebox .flairtoggle * {
+  vertical-align: middle;
+}
+html body .side .spacer .titlebox .tagline {
+  border-bottom: solid 4px #ccc;
+  background-color: #f2f2f2;
+  padding: 10px 5px;
+  display: block;
+  margin: 0px;
+}
+html body .side .spacer .titlebox .usertext .md {
+  border-bottom: solid 5px #ccc;
+  background-color: #f2f2f2;
+  margin: 20px 0px 0px 0px;
+  padding: 10px;
+}
+html body .side .spacer .titlebox .usertext .md h1 {
+  text-align: center;
+  position: relative;
+  font-size: 14px;
+}
+html body .side .spacer .sidecontentbox .content {
+  border-bottom: solid 5px #ccc;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  font-weight: normal;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  padding: 10px;
+}
+html body .side .spacer .sidecontentbox .content ul li {
+  padding: 2px 5px;
+}
+html body .side .spacer .sidecontentbox .content ul li a {
+  background: none;
+}
+html body.submit-page div.content {
+  margin: 0px 320px 0px 20px !important;
+}
+html body.submit-page div.content h1 {
+  border-bottom: solid 5px #1e1e1e;
+  margin: 20px 15px 20px 0px;
+  background-color: #222;
+  position: relative;
+  font-size: 14px;
+  padding: 10px;
+  color: #ccc;
+}
+html body.submit-page div.content form.content {
+  margin: 0px 20px 0px 0px;
+  padding: 0px;
+}
+html body.submit-page div.content form.content .tabmenu {
+  height: 30px !important;
+  padding: 0px;
+  margin: 0px;
+}
+html body.submit-page div.content form.content .tabmenu li {
+  height: 30px !important;
+  vertical-align: middle;
+  padding: 0px;
+  margin: 0px;
+}
+html body.submit-page div.content form.content .tabmenu li.selected a {
+  border-bottom: solid 5px #e63e00;
+  background-color: #ff4500;
+  height: 30px !important;
+  color: #fff;
+}
+html body.submit-page div.content form.content .tabmenu li a {
+  border-bottom: solid 5px transparent;
+  padding: 0px 15px !important;
+  height: 30px !important;
+  vertical-align: middle;
+  display: inline-block;
+  border-right: none;
+  line-height: 30px;
+  border-left: none;
+  background: none;
+  border-top: none;
+  font-size: 14px;
+  color: #ccc;
+}
+html body.submit-page div.content form.content .tabmenu li a:hover {
+  border-bottom: solid 5px #008ae6;
+  background-color: #0099ff;
+}
+html body.submit-page div.content form.content .formtabs-content {
+  border-top: solid 5px #222;
+  padding: 0px 0px 0px 0px;
+  display: block;
+  width: auto;
+}
+html body.submit-page div.content form.content .formtabs-content .spacer {
+  margin: 20px 0px;
+}
+html body.submit-page div.content form.content .formtabs-content .spacer .infobar {
+  border-bottom: solid 5px #1e1e1e;
+  margin: 0px 0px 0px 0px;
+  background-color: #222;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  padding: 10px;
+  color: #ccc;
+}
+html body.submit-page div.content form.content .formtabs-content .spacer .roundfield {
+  border-bottom: solid 5px #1e1e1e;
+  background-color: #222;
+  border-radius: 0px;
+  display: block;
+  width: auto;
+  color: #ccc;
+}
+html body.submit-page div.content form.content .formtabs-content .spacer .roundfield#url-field,
+html body.submit-page div.content form.content .formtabs-content .spacer .roundfield#title-field {
+  border-bottom: solid 5px #ccc;
+  background-color: #f2f2f2;
+  color: #2f2f2f;
+}
+html body div.content {
+  margin: 0px 320px 0px 160px;
+  padding: 0px;
+}
+html body div.content .searchpane {
+  border-bottom: solid 5px #1e1e1e;
+  margin: 20px 20px 0px 20px;
+  background-color: #222;
+  border-right: none;
+  border-left: none;
+  padding: 6px 10px;
+  border-top: none;
+  font-size: 12px;
+  color: #ccc;
+}
+html body div.content > .menuarea {
+  border-bottom: solid 5px #1e1e1e;
+  margin: 20px 20px 0px 20px;
+  background-color: #222;
+  padding: 6px 10px;
+  font-size: 12px;
+  color: #ccc;
+}
+html body div.content > .menuarea .spacer {
+  margin: 0px;
+}
+html body div.content #siteTable {
+  padding: 20px 20px 0px 20px;
+}
+html body div.content #siteTable .thing {
+  border-bottom: solid 5px #ccc;
+  background-color: #f2f2f2;
+  margin: 0px 0px 20px 0px;
+  position: relative;
+  padding: 10px;
+}
+html body div.content #siteTable .thing .rank {
+  text-align: center;
+  position: absolute;
+  line-height: 20px;
+  font-size: 14px;
+  height: 20px;
+  width: 20px;
+  color: #222;
+  left: -20px;
+  top: -15px;
+}
+html body div.content #siteTable .thing .midcol {
+  overflow: visible;
+}
+html body div.content #siteTable .thing .midcol .arrow {
+  -webkit-box-shadow: #bfbfbf 0px 2px 0px 0px;
+  -moz-box-shadow: #bfbfbf 0px 2px 0px 0px;
+  box-shadow: #bfbfbf 0px 2px 0px 0px;
+  background: #ccc !important;
+  border-radius: 10px;
+  overflow: visible;
+}
+html body div.content #siteTable .thing .midcol .arrow.upmod {
+  -webkit-box-shadow: #e63e00 0px 2px 0px 0px;
+  -moz-box-shadow: #e63e00 0px 2px 0px 0px;
+  box-shadow: #e63e00 0px 2px 0px 0px;
+  background-color: #ff4500 !important;
+}
+html body div.content #siteTable .thing .midcol .arrow.downmod {
+  -webkit-box-shadow: #008ae6 0px 2px 0px 0px;
+  -moz-box-shadow: #008ae6 0px 2px 0px 0px;
+  box-shadow: #008ae6 0px 2px 0px 0px;
+  background-color: #0099ff !important;
+}
+html body div.content #siteTable .thing .midcol .likes,
+html body div.content #siteTable .thing .midcol .dislikes,
+html body div.content #siteTable .thing .midcol .unvoted {
+  text-align: center;
+  line-height: 20px;
+  height: 20px;
+  width: 20px;
+}
+html body div.content #siteTable .thing .midcol .likes {
+  color: #ff4500;
+}
+html body div.content #siteTable .thing .midcol .dislikes {
+  color: #0099ff;
+}
+html body div.content #siteTable .thing .entry .expando .usertext-body .md {
+  background-color: #fff;
+  border-radius: 0px;
+  border: none;
+}
+html body div.content #siteTable #noresults {
+  border-bottom: solid 5px #1e1e1e;
+  margin: 0px 0px 20px 0px;
+  background-color: #222;
+  position: relative;
+  font-size: 14px;
+  padding: 10px;
+}
+html body div.content .commentarea .panestack-title {
+  border-bottom: solid 5px #1e1e1e;
+  margin: 20px 20px 0px 20px;
+  background-color: #222;
+  padding: 6px 10px;
+  font-size: 12px;
+  color: #ccc;
+}
+html body div.content .commentarea .panestack-title .spacer {
+  margin: 0px;
+}
+html body div.content .commentarea .menuarea {
+  border-bottom: solid 5px #ccc;
+  margin: 0px 20px 0px 20px;
+  background-color: #f2f2f2;
+  padding: 6px 10px;
+  font-size: 12px;
+  color: #2f2f2f;
+}
+html body div.content .commentarea .menuarea .spacer {
+  margin: 0px;
+}
+html body div.content .commentarea > form.usertext {
+  border-bottom: solid 5px #ccc;
+  padding: 10px 10px 0px 10px;
+  margin: 20px 20px 0px 20px;
+  background-color: #f2f2f2;
+  color: #2f2f2f;
+}
+html body div.content .commentarea > .comment-visits-box {
+  border-bottom: solid 5px #ccc;
+  margin: 20px 20px 0px 20px;
+  background-color: #f2f2f2;
+  border-radius: 0px;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  color: #2f2f2f;
+}
+html body div.content .commentarea > .sitetable {
+  margin: 20px 20px 0px 20px;
+}
+html body div.content .commentarea > .sitetable > .thing {
+  border-bottom: solid 5px #ccc;
+  padding: 5px 10px 0px 10px;
+  background-color: #f2f2f2;
+  margin: 0px 0px 20px 0px;
+}
+html body div.content .commentarea > .sitetable > .thing .midcol {
+  overflow: visible;
+}
+html body div.content .commentarea > .sitetable > .thing .midcol .arrow {
+  -webkit-box-shadow: #bfbfbf 0px 2px 0px 0px;
+  -moz-box-shadow: #bfbfbf 0px 2px 0px 0px;
+  box-shadow: #bfbfbf 0px 2px 0px 0px;
+  background: #ccc !important;
+  margin: 0px 0px 5px 0px;
+  border-radius: 10px;
+  overflow: visible;
+}
+html body div.content .commentarea > .sitetable > .thing .midcol .arrow.upmod {
+  -webkit-box-shadow: #e63e00 0px 2px 0px 0px;
+  -moz-box-shadow: #e63e00 0px 2px 0px 0px;
+  box-shadow: #e63e00 0px 2px 0px 0px;
+  background-color: #ff4500 !important;
+}
+html body div.content .commentarea > .sitetable > .thing .midcol .arrow.downmod {
+  -webkit-box-shadow: #008ae6 0px 2px 0px 0px;
+  -moz-box-shadow: #008ae6 0px 2px 0px 0px;
+  box-shadow: #008ae6 0px 2px 0px 0px;
+  background-color: #0099ff !important;
+}
+html body div.content .commentarea > .sitetable > .thing .child {
+  border-left: dotted 1px #ff8f66;
+}
+html body div.content .commentarea > .sitetable > .thing .child .child {
+  border-color: #66c2ff;
+}
+html body div.content .commentarea > .sitetable > .thing .child .child .child {
+  border-color: #ff8f66;
+}
+html body div.content .commentarea > .sitetable > .thing .child .child .child .child {
+  border-color: #66c2ff;
+}
+html body div.content .commentarea > .sitetable > .thing .child .child .child .child .child {
+  border-color: #ff8f66;
+}
+html body div.content .commentarea > .sitetable > .thing .child .child .child .child .child .child {
+  border-color: #66c2ff;
+}
+html body div.content .commentarea > .sitetable > .thing .child .child .child .child .child .child .child {
+  border-color: #ff8f66;
+}
+html body div.content .commentarea > .sitetable > .thing .child .child .child .child .child .child .child .child {
+  border-color: #66c2ff;
+}
+html body div.content .commentarea > .sitetable > .thing .child .child .child .child .child .child .child .child .child {
+  border-color: #ff8f66;
+}
+html body div.content .commentarea > .sitetable > .thing .child .child .child .child .child .child .child .child .child .child {
+  border-color: #66c2ff;
+}
+html body div.content .commentarea > .sitetable > .thing .child .child .child .child .child .child .child .child .child .child .child {
+  border-color: #ff8f66;
+}
+html body div.content .commentarea > .sitetable > .thing .child .child .child .child .child .child .child .child .child .child .child .child {
+  border-color: #66c2ff;
+}
+html body div.content .commentarea > .sitetable > .thing .child .child .child .child .child .child .child .child .child .child .child .child .child {
+  border-color: #ff8f66;
+}
+html body .footer-parent .footer {
+  border-radius: 0px !important;
+  border: none !important;
+}
+html body .footer-parent .footer .col {
+  border-bottom: solid 5px #ccc;
+  background-color: #f2f2f2;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  margin: 0px 10px;
+  height: auto;
+  padding: 0px;
+}
+html body .footer-parent .footer .col ul {
+  padding: 0px 0px 5px 0px;
+  color: #f2f2f2;
+}
+html body .footer-parent .footer .col ul li {
+  text-transform: capitalize;
+  padding: 2px 10px;
+}
+html body .footer-parent .footer .col ul li.title {
+  border-bottom: solid 5px #1e1e1e;
+  background-color: #222;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #f2f2f2;
+}
